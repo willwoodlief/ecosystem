@@ -17,7 +17,8 @@ Each shaped code has a probability of bonding, there is a constant sum
 of all probability for bonding in each area.
 Bonding changes probability based on the two codes previous bonding probability
 
-
+Sections of code can only bond to each other if they are complimentary.
+Constants in the code are not considered
 
 Instruction Set:
 All instructions read and write to a sparse array [level]
@@ -74,3 +75,8 @@ Loops are controlled by other things
 Each block can run at the same time. Level run order is not defined.
 If a level is read , and its code block, and that block has never run
 then the result is 0
+
+
+===================
+arrays make shaped instructions and spaces
+spaces make all other things in Ecosystems
