@@ -1,0 +1,76 @@
+arrays are base of everything
+all values in an array is interpreted as instruction set and run
+sequentially. Each instruction has a byte value.
+
+arrays can be turned into shaped blocks or space
+
+A space has up to 255 levels with memory and or blocks of instructions.
+Each block of instruction is able to run at the same time
+But each block needs a co-code bonded to it to actually run
+When each code pair bonds, a third code if formed, a code result.
+
+There is a limit in each area to how many code results there can be.
+if there is no more room for a code result, then codes cannot bond
+so codes cannot execute
+
+Each shaped code has a probability of bonding, there is a constant sum
+of all probability for bonding in each area.
+Bonding changes probability based on the two codes previous bonding probability
+
+
+
+Instruction Set:
+All instructions read and write to a sparse array [level]
+Not all levels need exist
+Levels are integers -127 to 128
+Values of [level] are floating point, and can be any number of bytes
+    but if the value being written exceeds what can be stored an error
+    happens
+
+
+  Levels below 0 are reserved for the system
+  Level -1 stores last level exception
+  Level -2 is read only and gives the time in unix epoch
+  other levels are here too
+
+  Each Block of code is at a specific level. If code is at that level
+  then the level value is always the last value of the code when it last
+  executed
+
+  Blocks of code at level 0 only have structure instructions run
+  Structure instructions are only run on level 0
+
+  Level means a number for the level, [Level] means the value of level
+
+Read  Level | [Level]
+    Reads in the level
+Write Level | [Level]
+    Writes the level
+onChange Level | [Level]
+    Pauses until the Level value has been written to again since last call
+doIfFalse Level | [Level]
+    Pauses until the level value is zero
+doIfTrue Level | [Level]
+    Pauses until the level value is not zero
+Math operations
+()+-*/ other standard math stuff (floor,exp trig, etc)
+bit operations
+&|^
+logic, always makes a 0 or 1 value
+< > == etc
+
+Structure Instructions
+MakeLevelCode Level
+   Makes the code be structured into a block of code for that level
+   until the next Level command
+MakeLevelMemory
+   Converts the code to writable memory at that level for all bytes until the next
+    Memory command
+
+Notice there are not any if or loop type statements
+The wait doubles as an if
+Loops are controlled by other things
+
+Each block can run at the same time. Level run order is not defined.
+If a level is read , and its code block, and that block has never run
+then the result is 0
