@@ -1,3 +1,152 @@
+add array of n bytes, all data in the array is considered bytecode of instruction
+set below, and is executed at level 0, at level 0 the only commands run are
+the structure commands that need no co-code to execute. If the code has no
+structure commands then no code is ever executed unless it can match structured
+code somewhere on one of its levels.
+
+all arrays have some memory allocated before index 0 which is used by the system
+and stores probability of interaction and perhaps other things.
+
+array->shaped->area
+
+shaped arrays are those arrays which have special indexes called levels.
+Each level holds either instructions or room for data. All levels can execute
+their instructions simultaneously ,
+However the instructions cannot execute without matching up to another series
+of instructions called the co-code, the co-code is matched based on instructions
+in a pattern. Whenever code and co-code both execute together, a third partially random
+series of code is generated called the product-code. Code availability is a percentage of success of linking up
+with a co-code, code/co-code links only last one cycle. Code availability is
+transfered, altered , by the bonding of code/co-code, and the heigher availability is
+partially transferred to the lower based on a ratio of availability. There is a limit
+to the amount of product-code allowed in a space, and if there is only enough co-reactions
+allowed if there is enough left to the product limit.
+
+Product code is born with a random amount of availability, and is based off the code and co-code
+with random mutations.
+
+
+1)Life Cycle of product code. Much have short lifespans. How are some lifespans not short
+  and how are they marked as product and not regular shaped.
+  product start as an array at level 0
+  but can become shaped if having those instructions
+
+2) what is basic idea behind co-code bonding, which parts are attracted. Co code
+   can only match one level to one other level. Maybe co-code should have its own instruction
+   set to have patterns against families of code. This means product code can sometimes have
+   co-code in it.
+
+3) how do areas store shaped
+4) how to shaped interact
+
+shaped can share pieces of co-code which in turn ensures that more code can be
+activated. Here we are starting to think that co-code can fit one to many against code.
+co-code has a heigher chance of being used by the same code if the potential works out,
+and can also transfer potential between code (act as a carrier of potential).
+Two or more shaped can keep reusing the same cocode without sharing it with anything else
+if there are enough places for the co-code to latch on to.
+
+Conservation of potential. In each area, the sum of all levels of all shaped potentials is a
+constant, what is lost as potential in one place has to be added somewhere else.
+*co code orbits* It requires  more potential than is in the co-code orbit to break the co-code out.
+Co-code can carry high potential to less potential code by taking of the potential and giving
+it to the lesser potential, but lesser potential code can transfer their lower energy state
+to higher potential also by being more numerous than the higher potential, and by average
+having more of the co-code bonding.
+
+The same instructions found in co-code to match can also be combined with instructions to change
+the matched code. So some co-code does not activate but can change, matching can also be
+across branches of shaped arrays, when changing.
+
+co-code instructions include matching patterns of code (can cross level boundaries I guess now),
+and the ability to decide what to do after matching, does it run the code or does it change and edit
+the code, co-code matching can also adding in code that is not there, by making a pattern that
+searches for missing code.
+
+So all energy and work comes from co-code.
+
+
+areas store shaped with no position.
+
+shaped can store other shaped if the levels of the intersecting shaped share do not match the levels
+of the storing shaped, when this happens the shaped acts like a merge. Communication between
+shaped is done at defined levels (negative levels). Certain negative levels when written to, can be
+read by all other shaped inside the same container.
+
+containers can store more than one shaped that conflict on levels, there are some levels which
+only allow one shaped at a time to use it, and other levels which different shaped can use their
+own , same number, levels.
+container levels:
+(reserved for the container itself)
+(only one child at at time can use these)
+(any children can use these)
+(below level 0, special levels all , including container can read and/or write)
+
+There is another feature that allows a container to allow or disallow shaped to be in it,
+and this is flavor , containers can have different flavors in its band of levels that
+attracts, allows or rejects shaped inside of it, if there is no flavor that allows a shaped,
+  then the shaped is rejected
+
+An outside shaped is attracted to the container with the most accepting amount of levels,
+  and attracted levels even more so.
+
+  flavor is an additional feature alongside the bytecode, and is stored before the first
+  index in the array alongside potential.
+
+  Flavors get written to the level using the flavor command, when the level is created as part
+  of the structure, the flavor is set there. the flavor is good until the next flavor command.
+   band flavor does not effect the shaped flavor
+  COMMAND: flavor level, if level is -1 then this sets the whole shaped flavor
+
+  each of the BANDS have their own -level which can share data. This level is actualy the same
+  number for each band, but each band writes and reads in its own space
+
+  A sub (a child that is in a container), can also be a container, but the levels it stores stuff
+  in has to be between the allowed levels it can be in.
+
+  What further limits for sub-subs is there. Is there a max storage per level total for all ?
+  I dont know
+
+  Flavor
+  Both the container A, and the sub B, has its own flavor, how the flavors combine determined
+  if the space is preferred, average, or not allowed.
+  Flavor has an int mask, and an int value
+  apply the outside flavor to this flavor though the and mask and then or it to the value.
+  If the sum colors are greater than the midway point using the color masks then match
+  test = outside & value
+  255 | test + 255<<8 | test + 255<<16 | test >= 3* 88
+  the 8 highest bits can be used as a flag for the flavor
+
+  Containers can have their own space coordinates, space coordinates in subs are not allowed.
+  How are space coordinates formed ?
+
+  Describe product code more, how long it lasts, and what its evolution path is like
+  is product a mix of code and co-code ? is this mix stable ? Or is product just co-code
+  and this generates additional co-code, some of which can modify existing code.
+  If co-code adds more instructions than the level has space, then the array is reassigned
+  more memory to handle the middle of things (or is level commands already seperate arrays,
+  this sounds like implementation and maybe not covered here).
+
+  co-code meets code, potential is shifted , with some lost ? additional co-code created ?
+  where does co-code go to,
+  co-code same flavor restrictions to bands, and areas.
+  potential lifespan. Creation, changes in potential levels, does co-code get erased at
+  potential 0 ? Is potential erased from co-code every time it interacts
+  can co-code potential be added back ?
+  does potential add to code from co-code ?
+  can co-code generated from exchange have deliberately some flavor properties ?
+  co-code pattern matching and coloring.
+  More levels, more instructions firing more potential needed?
+  How is potential created ?
+
+
+
+
+area allow shaped inside and contain dimension, although the shapes inside
+themselves do not have coordinates or size compared to the area.
+There is a limit of shapes in an area.
+
+
 arrays are base of everything
 all values in an array is interpreted as instruction set and run
 sequentially. Each instruction has a byte value.
@@ -61,12 +210,11 @@ logic, always makes a 0 or 1 value
 < > == etc
 
 Structure Instructions
-MakeLevelCode Level
+StructureCode Level
    Makes the code be structured into a block of code for that level
    until the next Level command
-MakeLevelMemory
-   Converts the code to writable memory at that level for all bytes until the next
-    Memory command
+StructureMemory Level
+   Converts the code to writable memory at that level until next structure command
 
 Notice there are not any if or loop type statements
 The wait doubles as an if
