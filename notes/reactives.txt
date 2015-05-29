@@ -1,0 +1,33 @@
+More unorganized notes
+
+shaped x co-code = co-code (original), shaped,co-code(new)
+
+
+So new law:
+the sum of the potential is conserved in a code reaction
+
+also potential can convert to code, and back again
+
+so, to create more code from a reaction takes away from the potential
+CC(a) + C(b) --> CC(a-n) + c(b-m) + New(o)
+
+where o = m + n
+
+------------------
+code with no potential can be removed to form potential that is given to
+the CC that deactivates it
+
+Also, cc(a) + cc(b) --> cc(a+n) + cc(b-n)
+if one cc can bind with another
+
+
+so what determines if a code reaction just passes potential (and to which)
+or forms new code with the potential ?
+
+a) potential has to come off one thing
+b) it has to be either applied to another or cannot be applied
+c) potential that cannot be applied will form code (potential cannot exist without code)
+d) will the new code have some potential, or will the potential be all used up in creating
+
+
+Units of potential vs units of code
