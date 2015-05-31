@@ -24,3 +24,26 @@ potential so reach a method of diminishing returns.
 
 work is the ability to transfer bonded potential
 and some code more tightly holds onto its potential than others
+
+PUSHING and PULLING
+Pushing and pulling can only occur when an item moves through a space.
+when something outside the subgroup or even shaped provides the force
+to move it.
+This all boils down to whether the potential to move the item to another subgroup
+comes from the inside or the outside of the item.
+and this is difined on how the command to move is done. Cocode will
+attach to the subgroup or the shaped (but never to a space) and there is
+an instruction to move that is fired in the co-code or in the code of the item
+If the instruction is in the co-code this is an outside force, else if in
+the code of the object this is an inside force. The potential comes from
+the item that houses the code in question.
+Pushing and pulling are only different in the relative directions of the force
+applied, and really has nothing to do with the avove direction as its only
+a matter of semantics.
+Holding something in place is when one movement to a subgroup is
+countered, or can be countered by another movement. The force expanded
+to move each way is compared, and the greater force moves, if there is enough
+in the difference between the two forces to overcome the potential barrier between
+subgroups.
+
+Stickiness, and Texture is how much holding there is between items.
