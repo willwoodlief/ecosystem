@@ -1,0 +1,29 @@
+Code becomes shaped and either co-code or regular code
+Container is shaped code with subranges attached to the levels
+A space coordinate is a container that has another level coordinate system
+attached to at least one subrange
+
+subranges contain flavors
+
+A world is space attached to each other directly
+
+space can be attached either directly or through a gate
+a gate is indistinguishable from a direct connection from the sides
+of a space connected
+
+a potential pool is the potential that must be there. Any code that exists
+is = to a certain amount of potential
+free potential is the potential that must be there but not bonded to any code
+or is not code already
+
+so inside a potential pool , code is automatically made and/or given potential
+until the free potential is = code + bonded potential
+
+during a code exchange between co-code and code, bonded potential either
+passes between the code or some bonded potential becomes free potential again
+the free potential automatically becomes code once enough has accumulated.
+
+Code can be converted to potential again, but only a certain amount of the
+potential becomes bonded potential to the code converting it
+
+A potential pool always has the same sum of free + bonded + code

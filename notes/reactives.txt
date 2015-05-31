@@ -31,3 +31,18 @@ d) will the new code have some potential, or will the potential be all used up i
 
 
 Units of potential vs units of code
+
+when two interact there are two numbers compared:
+result is
+a) potential given
+a2) code created
+b) potential recieved
+b2) code created
+so number compared, three different ranges of difference, both positive and negative
+1) all potential passed to existing
+2) mix of passed to existing and creating new
+3) all creating new
+
+most new code is very small as the potential is not that much, unless
+the range 2 and 3 is only for huge differences in potential between a and b
+but how rare does this make the creation of new code , which needs to be frequent
