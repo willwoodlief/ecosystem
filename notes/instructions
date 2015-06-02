@@ -1,0 +1,38 @@
+
+all items start as an array of code
+some instructions in the array can give structure to the array
+
+
+Type
+
+
+  Level : Levels have code or memory, negative levels are system, 0 is init, and positive is code that can be run
+          Level has potential stored
+          Code needs potential to run, multiple levels can run at the same time
+
+
+  Bands: Bands have color and can add other axis of level. A band starts on one level
+         and ends on another level.
+         Bands can contain other shaped code
+    Color : how 2 items interact with each other, in a band
+    Band level axis: basic level is only one access, but in a band 2 and 3 axis form so that colors of bands can form maps
+
+
+
+
+  Read  Level | [Level]
+      Reads in the level
+  Write Level | [Level]
+      Writes the level
+  onChange Level | [Level]
+      Pauses until the Level value has been written to again since last call
+  doIfFalse Level | [Level]
+      Pauses until the level value is zero
+  doIfTrue Level | [Level]
+      Pauses until the level value is not zero
+  Math operations
+  ()+-*/ other standard math stuff (floor,exp trig, etc)
+  bit operations
+  &|^
+  logic, always makes a 0 or 1 value
+  < > == etc
